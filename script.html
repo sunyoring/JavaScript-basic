@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+</head>
+<body>
+    <input type="button" id="hw" value="Hello world">
+    <script> 
+        var hw = document.getElementById('hw');
+        hw.addEventListener('click',function(){
+            alert('Hello world');
+        })
+    </script>
+
+    <!--script태그 안에 js코드를 작성한다.
+    html코드와 script코드가 분리되어 있다. 정보제어,유지보수가 더 용이하다.-->
+</body>
+</html>

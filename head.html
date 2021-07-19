@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head</title>
+    <script src ="head.js"></script>
+
+    <!-- head 태그의 위치를 더 많이 사용하지만 사실 body태그의 끝 부분에 위치시키는 것이 더바람직하다.
+    script에서 가리키고 있는 태그를 아직 실행시키기 전이므로 존재하지 않는 객체의 코드를 실행시킬 수 없다. 이 문제를 아래와 같이 해결가능-->
+
+    <!-- head.js
+    <script>
+        window.onload = function(){ //onload -> 현재 페이지의 모든 코드를 읽고나서 내부 함수가 실행된다.document.getElementById() 가 존재하게 된다.
+            var hw = document.getElementById('hw');
+                hw.addEventListener('click',function(){
+                    alert('Hello world')
+                })
+        } //script코드를 바디태그의 맨 아래에 위치시키면 이와 같이 사용해줄 필요가 없다.
+    </script>
+
+-->
+</head>
+<body>
+    <input type="button" id="hw" value="Hello world">
+</body>
+</html>
