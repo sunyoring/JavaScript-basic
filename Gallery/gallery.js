@@ -12,13 +12,30 @@ req.onreadystatechange = function(){  //onreadystatechange : 속성이 변경 �
            var div = document.createElement("div"); //div태그를 생성하여 변수에 저장
            div.setAttribute("class","image") //div의 class 명을 image로 설정
            div.onclick = function() {
-               if( this.getAttribute("class").indexOf("image-selected") == -1){ //클릭했을 때 image-selcted 클래스명이 존재하지 않는다면
+               
+            if( this.getAttribute("class").indexOf("image-selected") == -1){ //클릭했을 때 image-selcted 클래스명이 존재하지 않는다면
                 this.setAttribute("class","image image-selected"); //클릭했을 때 image-selected를 추가해준다. 
                }else{ //존재한다면 삭제
                    this.setAttribute("class","image");
                }
+            
+             //위의 코드를 한줄로 처리할 수 있다. css의 스타일을 적용할 수 있는 스위치 on/off의 개념으로
+                                                    //주로 사용되며, classList.add() 와 classList.remove()의 기능을 한 번에 수행할 수 있다.
+
+
+           }
+        
+           div.onmouseover = function() { //이 익명함수의 this는 div이다.
+               var element = this; //element에 this를 저장하고 하위 함수의 스코프를 이용해 setTimeout에서 div에 접근이 가능하도록 한다.
+               this.timerId = setTimeout( function(){ //함수를 의도적으로 지연시킨 뒤 실행시키고 싶을 때 사용하는 함수 (콜백함수, 지연시간)
+                element.classList.add("image-magnified");
+               }, 1000);
            }
 
+           div.onmouseout = function() {
+              clearTimeout(this.timerId);
+               this.classList.remove("image-magnified");
+           }
            var img = document.createElement("img");
            img.src = data[i]; //리스트에서 하나씩 꺼내와서 이미지 태그의 주소에 넣어줌
            div.appendChild(img); //div태그 안에 img태그 추가
@@ -27,3 +44,27 @@ req.onreadystatechange = function(){  //onreadystatechange : 속성이 변경 �
     }
 }
 req.send();
+
+
+function selectAll(button){
+    var images = document.getElementsByClassName("image");
+
+
+    for(var i = 0; i < images.length; i++){
+
+        if(button.value == "Unselect All"){
+            images[i].classList.remove("image-selected");
+
+        }else{
+            images[i].classList.add("image-selected");
+        }
+    }
+
+    if(button.value == "Unselect All"){
+        button.value = "Select All"
+      } else {    
+     button.value ="Unselect All";
+        
+        }
+
+}
