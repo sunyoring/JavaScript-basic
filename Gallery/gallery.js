@@ -68,3 +68,19 @@ function selectAll(button){
         }
 
 }
+
+function slideShow(button){
+    var images = document.getElementsByClassName("image");
+    var index = 0;
+    images[index].classList.add("image-magnified");
+
+    var interverId = setInterval( function(){ //setInterval() : 일정한 시간 간격으로 작업을 수행하기 위해서 사용.
+        images[index++].classList.remove("image-magnified");
+        if( index < images.length){
+            images[index].classList.add("image-magnified");
+        }else{
+            clearInterval(interverId); // setInterval() 을 종료,중지
+        }
+
+    }, 1000);
+}
