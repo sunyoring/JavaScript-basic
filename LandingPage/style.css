@@ -46,3 +46,4 @@ body{
 #dynamic.active::after{ /* active 클래스가 추가될 때 커서를 안보이게 함*/
     display: none;
 }
+

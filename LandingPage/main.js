@@ -30,13 +30,8 @@ function dynamic(randomArr){
 dynamic(randomString()); //초기에 작동될 함수 
 
 
-
-
-
-
-
 function blink() { //커서가 깜빡이는 효과
-    target.classList.toggle("active");
+    target.classList.toggle("active"); 
 }
 setInterval(blink,500);
 

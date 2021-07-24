@@ -1,0 +1,17 @@
+
+
+
+.wrap{
+    width: 100%;
+    height: 1300px;
+    background-color: darkslateblue;
+    position: relative;
+    text-align: center;
+}
+
+
+fieldset{
+    display: inline-block;
+    width: 30%;
+    height: 900px;
+}
