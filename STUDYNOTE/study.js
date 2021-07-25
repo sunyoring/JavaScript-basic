@@ -5,5 +5,6 @@ function start() {
     var field = document.getElementById("field");
  
         field.innerHTML += "* "+text + "<br>";
+        localStorage.setItem(text);
 
 }
