@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <style>
+      * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Rajdhani','sans-serif';
+            display: flex; /*하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성*/
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  /*vh : veiwport height*/
+            background: white;  /* url(이미지 주소) no-repeat center :  배경을 반복없는 이미지로 */
+            background-size: cover;
+        }
+
+        .join-form h1{
+            font-size: 40px;
+            text-align: left;
+            margin-bottom: 100px;
+
+        }
+
+        .input-area{
+            margin:10px;
+            width: 400px;
+            position: relative;
+        }
+        .input-area input{
+            width: 100%;
+            padding: 15px 10px 10px;
+            line-height: 1.2em;
+            background: transparent;
+            margin-bottom: 10px;
+            border: 0.3px solid rgba(0,0,0,.1);
+            border-radius: 3px;
+            font-size: 19px;     
+            color: black;
+            outline: none; 
+        }
+   
+        .area{
+            margin-bottom: 20px;
+        }
+
+    
+        .pwd-area input{
+            background:rgba(0, 0, 0,.06);
+        }
+
+
+
+        label{
+            left: 10px;
+            top:15px;
+            font-size: 20px;
+            font-weight: 700;
+            color:rgba(0,0,0,.84);
+            padding-bottom: 5px;
+        }
+  
+    </style>
+</head>
+<body>
+    <section class="join-form" >
+        <h1>회원가입</h1>
+
+        <div class="input-area">
+
+            <div class="name-area area">
+               <label for="name">이름</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="email-area area">
+                <label for="email">이메일
+                </label>
+                <input type="email" id="email" name="email">
+                <button style="alik">인증하기</button>
+            </div>
+
+            <div class="pwd-area area">
+                <label for="name">비밀번호
+                <input type="password" id="password1" name="password1" placeholder="비밀번호">
+                <input type="password" id="password2" name="password2" placeholder="비밀번호 확인">
+            </label>
+            </div>
+
+        </div>
+    </section>
+    
+</body>
+</html>
