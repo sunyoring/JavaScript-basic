@@ -41,6 +41,8 @@
         }
         .login-btn:hover{
             cursor: pointer;
+            background: rgb(100, 220, 167) ;
+
         }
 
         /* .input-box{
@@ -62,7 +64,7 @@
         }
         .int-area{
             margin:10px;
-            width: 400px;
+            width: 500px;
             position: relative;
         }
         .int-area input{
@@ -98,6 +100,29 @@
             text-align: center;
             opacity: 0.6;
         }
+        .caption{
+            text-align: left;
+        }
+        #joinBtn{
+            width: 120px;
+            height: 30px;
+            margin-left: 115px;
+            background: rgb(0, 0, 0,0.1) ;
+            border : none;
+            border-radius: 5px;
+            opacity: 0.8;
+            color:rgba(0, 0, 0, 0.7);
+            font-weight: 600;
+            text-align: center;
+            font-family: 'Rajdhani',sans-serif;
+        }
+        #joinBtn:hover{
+            cursor: pointer;
+            background: rgb(0, 0, 0,0.3) ;
+            color:black;
+            font-size:14px;
+
+        }
         
     </style>
 </head>
@@ -123,9 +148,10 @@
         </form>
         <div class="caption">
             <br>
-            <a  href="../Join/Join.html" style="font-size: 1em">아직 계정이 없으신가요?</a><br>
+            <a  href="../Join/Join.html" style="font-size: 1em">아직 계정이 없으신가요?</a>
+            <button id = joinBtn onclick="location.href='../Join/Join.html'">회원가입</button>
 
-            <a  href="" style="font-size: 1em" >로그인 정보를 잊으셨나요?</a>
+            <!-- <a  href="" style="font-size: 1em" >로그인 정보를 잊으셨나요?</a> -->
         </div>
      
     </section>
