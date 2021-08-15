@@ -34,7 +34,7 @@
   
         .join-form h1{
             font-size: 40px;
-            text-align: center;
+            text-align: left;
             margin-top: 150px;
             margin-bottom: 100px;
         }
@@ -118,19 +118,29 @@
 
     <section class="menu-bar">
         <section id="main">
-            <button>메인화면</button>
+            <button>wadiz</button>
         </section>
         <section id="usermenu">
-            <button>로그인</button>
+            <button onclick="checkMove()" >로그인</button>
             <button>회원가입</button>
         </section>
  
     </section>
 
+    <script>
+        function checkMove(){
+            if(confirm("입력한 내용은 저장되지 않습니다. 이동하시겠습니까?")==true){
+                location.replace("http://127.0.0.1:5500/WEB/Login/Login01.html")
+            }
+        }
+    </script>
+
     <section class="join-form" >
-        <h1>회원가입</h1>
 
         <div class="input-area">
+
+            <h1>회원가입</h1>
+
 
             <div class="name-area area">
 

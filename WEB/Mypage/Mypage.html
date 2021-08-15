@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="../Join/menubar.css">
+
+    <style>
+
+        .container{
+        float: left;
+        }
+        .content1{
+            width: 30%;
+            display: inline;
+            float: left;
+        }
+
+        .content2{
+            width: 70%;
+            display: inline;
+            float: left;
+        }
+
+        h1{
+            position: relative;
+            left: 25%;
+            font-size: 40px;
+            text-align: left;
+            margin-top: 150px;
+            margin-bottom:40px;
+        }
+        .profile{
+            margin-left: 100px;
+            width: 240px;
+            height: 100vh;
+            border:none;
+            border-right: gray solid 1px;
+
+        }
+
+        .profile div{
+            float: left;
+            width: 100%;
+            padding: 40px 20px 20px 10px;
+            text-align: center;
+        }
+
+        .usericon{
+            font-size: 150px;
+            opacity: 0.1;
+        }
+        .modify button{
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            border: 3px solid rgb(100, 220, 167);
+            margin: 10px;
+            font-size: 1.3em;
+            color: gray;
+        }
+        .modify button:hover{
+            cursor: pointer;
+            background: rgb(100, 220, 167) ;
+            color: black;
+
+        }
+     
+    </style>
+</head>
+<body>
+
+    <section class="menu-bar">
+        <section id="main">
+            <button>wadiz</button>
+        </section>
+        <section id="usermenu">
+            <button onclick="checkMove()" >로그인</button>
+            <button>회원가입</button>
+        </section>
+
+        <h1>마이페이지</h1>
+
+    <div class="container">
+        <div class="content1">
+            <div class="profile">
+                <div class="profileImg">
+                    <span class="material-icons-outlined usericon">account_circle</span>     
+                    <br>
+                    <b style="font-size: 20px;"> ooo님, 어서오세요!</b>
+                </div>
+                <div class="modify">
+                    <button>정보수정</button><br>
+                    <button>로그아웃</button>
+                </div>
+            </div>
+        </div>
+       
+
+        <!-- <div class="content2">
+            <div class="section project ">
+                <h3>내가 참여한 프로젝트</h3>
+            </div>
+            <div class="section lecture">
+                <h3>내가 듣는 강의</h3>
+            </div>
+        </div>
+         -->
+
+    </div>
+</body>
+</html>
