@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="menubar.css" rel="stylesheet">
 
     
     <style>
@@ -17,24 +18,7 @@
             box-sizing: border-box;
         }
 
-        .menu-bar{
-            width: 100%;
-            height: 40px;
-            background: black;
 
-        }
-        .menu-bar button{
-            border: none;
-            width: 200px;
-            height: 100%;
-            background-color:rgba(0, 0, 0, 0);
-            color: white;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .menu-bar button:hover{
-            cursor: pointer;
-        }
         .join-form{
             font-family: 'Rajdhani','sans-serif';
             /* 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성*/
@@ -133,9 +117,14 @@
 <body>
 
     <section class="menu-bar">
-        <button>메인화면</button>
-        <button>로그인</button>
-        <button>회원가입</button>
+        <section id="main">
+            <button>메인화면</button>
+        </section>
+        <section id="usermenu">
+            <button>로그인</button>
+            <button>회원가입</button>
+        </section>
+ 
     </section>
 
     <section class="join-form" >
