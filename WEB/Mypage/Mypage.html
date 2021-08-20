@@ -12,24 +12,50 @@
     <style>
 
         .container{
-        float: left;
+            width: 1200px;
+            height: 100vh;
+            
         }
+
         .content1{
-            width: 30%;
-            display: inline;
             float: left;
         }
 
         .content2{
             width: 70%;
-            display: inline;
+            height: 100vh;
             float: left;
         }
+
+        .section{
+            width: 50%;
+            height: 100%;
+            float: left;
+            padding: 10px 10px 20px 30px;
+
+        }
+        .section h3{
+            font-size: 1.2em;
+            color: rgba(0, 0, 0, .8);
+            margin-bottom: 20px;
+        }
+        .section li{
+            display: block;
+            width: 80%;
+            height: 50px;
+            border: 1px solid rosybrown;
+            margin-bottom: 10px;
+        }
+        .section li a{
+            text-decoration: none;
+            
+        }
+
 
         h1{
             position: relative;
             left: 25%;
-            font-size: 40px;
+            font-size: 30px;
             text-align: left;
             margin-top: 150px;
             margin-bottom:40px;
@@ -39,7 +65,7 @@
             width: 240px;
             height: 100vh;
             border:none;
-            border-right: gray solid 1px;
+            border-right: lightgray solid 0.1px;
 
         }
 
@@ -55,18 +81,18 @@
             opacity: 0.1;
         }
         .modify button{
-            width: 200px;
+            width: 100%;
             height: 50px;
             border-radius: 30px;
-            border: 3px solid rgb(100, 220, 167);
+            border: 3px solid rgb(100, 220, 167,.5);
             margin: 10px;
             font-size: 1.3em;
             color: gray;
         }
         .modify button:hover{
             cursor: pointer;
-            background: rgb(100, 220, 167) ;
-            color: black;
+            background: rgb(100, 220, 177,.8) ;
+            color: white;
 
         }
      
@@ -94,22 +120,38 @@
                     <b style="font-size: 20px;"> ooo님, 어서오세요!</b>
                 </div>
                 <div class="modify">
-                    <button>정보수정</button><br>
+                    <button onclick="location.href='../Join/Modify.html'">정보수정</button><br>
                     <button>로그아웃</button>
                 </div>
             </div>
         </div>
        
 
-        <!-- <div class="content2">
+         <div class="content2">
             <div class="section project ">
                 <h3>내가 참여한 프로젝트</h3>
+        
+
+                <ul>
+                    <li><a href="">[끝판 앵콜]비건 오일풀링 클렌징밤</a></li>
+                    <li><a href="">[전액기부] 보호소의 아픈 동물들을 도와주세요! 유기동물 폰케이스</a></li>
+                    <li><a href="">[전액기부] 보호소의 아픈 동물들을 도와주세요! 유기동물 폰케이스</a></li>
+
+
+
+                </ul>
             </div>
             <div class="section lecture">
                 <h3>내가 듣는 강의</h3>
+                <ul>
+                    <li><a href="">와디즈 교육 파트너 모집 설명회</a></li>
+                    <li><a href="">와디즈 스토어 입점 설명회</a></li>
+                    <li><a href="">와디즈 스토어 입점 설명회</a></li>
+
+
+                </ul>
             </div>
         </div>
-         -->
 
     </div>
 </body>

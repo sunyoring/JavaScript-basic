@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="menubar.css" rel="stylesheet">
+    <title>회원정보수정</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="../Join/menubar.css">
 
-    
     <style>
-      * {
-            margin: 0 ;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+        .container{
+            width: 100%;
+            padding-top: 150px;
+        }
+    
 
         .join-form{
             font-family: 'Rajdhani','sans-serif';
@@ -32,11 +30,17 @@
         }
 
   
-        .join-form h1{
+        h1{
             font-size: 30px;
             text-align: left;
-            margin-top: 150px;
             margin-bottom: 100px;
+        }
+        label{
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            color:rgba(0,0,0,.7);
+            padding-bottom: 5px;
         }
 
         .input-area{
@@ -68,20 +72,6 @@
         .input-area input::placeholder{
             opacity: 0.5;
         }
-   
- 
-        .pwd-area input{
-            background:rgba(0, 0, 0,.06);
-        }
-
-        label{
-            line-height: 50px;
-            font-size: 20px;
-            font-weight: 700;
-            color:rgba(0,0,0,.7);
-            padding-bottom: 5px;
-        }
-
         .usercode-area{
             width: 100%;
             display: inline;
@@ -95,8 +85,9 @@
         .usercode-area label{
             font-size: 1em;
         }
-     
-        #joinBtn{
+
+             
+        #modifyBtn{
             margin-top: 50px;
             margin-bottom: 100px;
             background-color: rgb(116, 228, 190);
@@ -105,18 +96,19 @@
             font-size: 1.5em;
         }
 
-        #joinBtn:hover{
+        #modifyBtn:hover{
             cursor: pointer;
             background-color: mediumaquamarine;
 
         }
-    
-
+   
     </style>
 </head>
 <body>
 
-    <section class="menu-bar">
+
+    
+    <div class="menu-bar">
         <section id="main">
             <button>wadiz</button>
         </section>
@@ -124,32 +116,27 @@
             <button onclick="checkMove()" >로그인</button>
             <button>회원가입</button>
         </section>
- 
-    </section>
 
-    <script>
-        function checkMove(){
-            if(confirm("입력한 내용은 저장되지 않습니다. 이동하시겠습니까?")==true){
-                location.replace("http://127.0.0.1:5500/WEB/Login/Login01.html")
-            }
-        }
-    </script>
+    </div>
 
-    <section class="join-form" >
+
+    <div class="container">
+
 
         <div class="input-area">
 
-            <h1>회원가입</h1>
+            <h1>회원정보수정</h1>
 
 
-            <div class="name-area area">
+            
 
                 <label for="name">이름</label>
-                <input type="text" id="name" name="name" placeholder="이름 입력">
+                <input type="text" id="name" name="name" placeholder="홍길동" readonly>
 
                 <label for="email">이메일 아이디</label>
-                <input type="email" id="email" name="email" placeholder="이메일 입력">
-                <button>인증하기</button> <br>
+                <input type="email" id="email" name="email" placeholder="gildong@gmail.com" readonly>
+                <br><br>
+
 
                 <div class="pwd-area area">
                     <label for="name">비밀번호</label>
@@ -157,39 +144,20 @@
                     <input type="password" id="password2" name="password2" placeholder="비밀번호 확인">
                 
                 </div>
-    
-                
-                <label for="ssn">주민번호 </label>
-                <input type="email" id="email" name="email" placeholder="주민번호 입력">
-
                 
                 <label for="tel">전화번호 </label>
-                <input type="tel" id="tel" name="tel" placeholder="전화번호 입력">
+                <input type="tel" id="tel" name="tel" placeholder="000-0000-0000">
 
                 <label for="email">주소 </label>
-                <input type="email" id="email" name="email" placeholder="주소 입력">
+                <input type="email" id="email" name="email" placeholder="경기도 수원시 팔달구">
 
-                <label>회원구분</label>
-                <br>
-                <div class="usercode-area" >
-                    <input type="radio" class=usercode id="normal" name="usercode" value="일반회원"><label for="normal"> 일반회원</label>
-                   <input type="radio" class=usercode id="business" name="usercode" value="사업자회원"> <label for="business"> 사업자회원</label>
-                </div>
-               
 
                
-                <input id="joinBtn" type="submit" value="가입하기">
-            </div>
-
-                
-        
-
-
-
-          
+                <input id="modifyBtn" type="submit" value="수정완료">
 
         </div>
-    </section>
-    
+
+          
+</div>
 </body>
 </html>
