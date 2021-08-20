@@ -7,11 +7,22 @@
     <title>마이페이지</title>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
     rel="stylesheet" />
+
+     <!-- bootstrap 4 -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <!-- fontawesome bootstrap 4 용 icon -->
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <link rel="stylesheet" href="../Join/menubar.css">
 
     <style>
 
-        .container{
+        .box{
             width: 1200px;
             height: 100vh;
             
@@ -95,6 +106,12 @@
             color: white;
 
         }
+
+        footer >nav{
+            border-top: 3px solid rgba(0, 0, 0, .5);
+            border-bottom: 3px solid rgba(0, 0, 0, .5);
+
+        }
      
     </style>
 </head>
@@ -108,10 +125,10 @@
             <button onclick="checkMove()" >로그인</button>
             <button>회원가입</button>
         </section>
-
+    </section>
         <h1>마이페이지</h1>
 
-    <div class="container">
+    <div class="box">
         <div class="content1">
             <div class="profile">
                 <div class="profileImg">
@@ -153,6 +170,59 @@
             </div>
         </div>
 
+
+
     </div>
+
+
+    <footer class="container-fluid">
+        <!-- navbar -->
+       
+        <nav class="navbar navbar-expand-md navbar-light mb-5">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">정책.약관</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">개인정보처리방침</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">공지사항</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">문의사항</a>
+                </li>
+            </ul>
+        </nav>
+   
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-dark ml-4" style="width: 200px;">
+                    <i class="far fa-question-circle"></i>
+                    문의하기</button>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <b>KH(주)| 대표이사 ooo | 사업자 등록번호  000-00-000000</b> <br>
+                <small>서울특별시 강남구 강남구 테헤란로14길 6</small>
+            </div>
+            
+        </div>
+        <div class="media ml-3">
+            <img src="../resources/support_icon.png" alt="support_icon">
+            <div class="media-body">
+                <b>고객센터 000-0000</b><br>
+                <small>상담 가능 시간 : 평일 오전 9시 ~ 오후 6시 <br>
+                    (주말, 공휴일 제외)</small>
+            </div>
+        </div>
+        <!-- 문의하기 버튼 -->
+        <!-- 주소 및 사업자 등록번호 -->
+        <!-- 고객센터 -->
+    </footer>
 </body>
 </html>

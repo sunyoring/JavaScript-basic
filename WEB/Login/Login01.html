@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoginPage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <!-- bootstrap 4 -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <!-- fontawesome bootstrap 4 용 icon -->
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
     <link rel="stylesheet" href="../Join/menubar.css">
+
 
     <style>
 
@@ -19,6 +29,7 @@
             width: 500px;
             height: 100vh;  /*vh : veiwport height*/
             text-align: center;
+            margin: 0 auto;
         }
 
         .login-form h1{
@@ -115,6 +126,55 @@
 </head>
 <body>
 
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- brand -->
+            <a href="#" class="navbar-brand">사이트 이름</a>
+    
+            <!-- links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">펀딩하기</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="#" class="nav-link">채용공고</a>
+                </li>
+    
+                <!-- dropdowns -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                        더보기
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">link 1</a>
+                        <a href="" class="dropdown-item">link 2</a>
+                        <a href="" class="dropdown-item">link 3</a>
+                    </div>
+                </li>
+            </ul>
+    
+            <!-- 회원관리 오른쪽 붙이기 ml-auto -->
+            <ul class="navbar-nav ml-auto">
+                <!-- <span class="navbar-text">
+                    <i class="fas fa-search"></i>
+                </span> -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fas fa-search fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">회원가입</a>
+                </li>
+            </ul>
+        </nav>
+    
+
+
+
+<!--
     <section class="menu-bar">
         <section id="main">
             <button>wadiz</button>
@@ -125,35 +185,40 @@
         </section>
  
     </section>
+    -->
 
-    <section class="login-form">
-        <h1>로그인</h1>
-        <form action="">
-            <div class="int-area">
-                <input class="input-box" type="text" name ="id" id="id" autocomplete="off" required placeholder="이메일 아이디"> 
-                <label for="id">ID</label>
-
-                <!-- autocomplete : 자동완성기능,  required : 필수 작성 -->
+    <div class="box">
+        <section class="login-form">
+            <h1>로그인</h1>
+            <form action="">
+                <div class="int-area">
+                    <input class="input-box" type="text" name ="id" id="id" autocomplete="off" required placeholder="이메일 아이디"> 
+                    <label for="id">ID</label>
+    
+                    <!-- autocomplete : 자동완성기능,  required : 필수 작성 -->
+                </div>
+                <div class="int-area">
+    
+                    <input class="input-box"  type="password" name ="pwd" id="pwd" autocomplete="off" required placeholder="비밀번호 (영문, 숫자, 특수문자 포함 8자 이상)"> 
+                    <label for="pwd">PWD</label>
+    
+                    <button class="login-btn" type="submit">LOGIN</button>
+    
+    
+                </div>
+    
+            </form>
+            <div class="caption">
+                <br>
+                <a  href="../Join/Join.html" style="font-size: 1em">아직 계정이 없으신가요?</a>
+    
+                <!-- <a  href="" style="font-size: 1em" >로그인 정보를 잊으셨나요?</a> -->
             </div>
-            <div class="int-area">
+            <button id = joinBtn onclick="location.href='../Join/Join.html'">회원가입</button>
+    
+        </section>
+    </div>
 
-                <input class="input-box"  type="password" name ="pwd" id="pwd" autocomplete="off" required placeholder="비밀번호 (영문, 숫자, 특수문자 포함 8자 이상)"> 
-                <label for="pwd">PWD</label>
-
-                <button class="login-btn" type="submit">LOGIN</button>
-
-
-            </div>
-
-        </form>
-        <div class="caption">
-            <br>
-            <a  href="../Join/Join.html" style="font-size: 1em">아직 계정이 없으신가요?</a>
-
-            <!-- <a  href="" style="font-size: 1em" >로그인 정보를 잊으셨나요?</a> -->
-        </div>
-        <button id = joinBtn onclick="location.href='../Join/Join.html'">회원가입</button>
-
-    </section>
+   
 </body>
 </html>
