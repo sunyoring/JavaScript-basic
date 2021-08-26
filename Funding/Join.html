@@ -1,116 +1,125 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>회원가입</title>
-        <!-- bootstrap 4 -->
-        <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입</title>
+<!-- bootstrap 4 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&fa
+<link
+	href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&fa
          mily=Nanum+Gothic&family=Roboto&display=swap"
-            rel="stylesheet">
+	rel="stylesheet">
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            .join-form {
-                font-family: 'Rajdhani', 'sans-serif';
-                /* 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성*/
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-            .join-form div {
-                display: inline-block;
-                text-align: left;
-            }
-            #pageTitle {
-                font-size: 30px;
-                text-align: left;
-                margin-top: 150px;
-                margin-bottom: 100px;
-                font-family: 'Rajdhani', 'sans-serif';
-                font-weight: bolder;
-            }
-            .input-area {
-                width: 400px;
-            }
-            .input-area button {
-                width: 25%;
-                height: 30px;
-                background: rgba(100, 200, 167, .5);
-                border: none;
-                border-radius: 5px;
-                font-size: 1em;
-                color: white;
-                margin-left: 300px;
-            }
-            .input-area input {
-                width: 100%;
-                padding: 15px 10px 10px;
-                line-height: 1.2em;
-                background: transparent;
-                margin-bottom: 10px;
-                border: 0.3px solid rgba(0, 0, 0, .2);
-                border-radius: 10px;
-                font-size: 19px;
-                color: black;
-                outline: none;
-            }
-            .input-area input::placeholder {
-                opacity: 0.5;
-            }
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.join-form {
+	font-family: 'Rajdhani', 'sans-serif';
+	/* 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성*/
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.join-form div {
+	display: inline-block;
+	text-align: left;
+}
+#pageTitle {
+	font-size: 30px;
+	text-align: left;
+	margin-top: 150px;
+	margin-bottom: 100px;
+	font-family: 'Rajdhani', 'sans-serif';
+	font-weight: bolder;
+}
+.input-area {
+	width: 400px;
+}
+.input-area button {
+	width: 25%;
+	height: 30px;
+	background: rgba(100, 200, 167, .5);
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	color: white;
+	margin-left: 300px;
+}
+.input-area input {
+	width: 100%;
+	padding: 15px 10px 10px;
+	line-height: 1.2em;
+	background: transparent;
+	margin-bottom: 10px;
+	border: 0.3px solid rgba(0, 0, 0, .2);
+	border-radius: 10px;
+	font-size: 19px;
+	color: black;
+	outline: none;
+}
+.input-area input::placeholder {
+	opacity: 0.5;
+}
 
-            .pwd-area input {
-                background: rgba(0, 0, 0, .06);
-            }
-            label {
-                line-height: 50px;
-                font-size: 20px;
-                font-weight: 700;
-                color: rgba(0, 0, 0, .7);
-                padding-bottom: 5px;
-            }
-            .usercode-area {
-                width: 100%;
-                display: inline;
-            }
-            .usercode-area input {
-                width: 70px;
-                margin-left: 20px;
-            }
-            .usercode-area label {
-                font-size: 1em;
-            }
-            #joinBtn {
-                margin-top: 50px;
-                margin-bottom: 100px;
-                background-color: rgb(116, 228, 190);
-                border: none;
-                color: white;
-                font-size: 1.5em;
-            }
-            #joinBtn:hover {
-                cursor: pointer;
-                background-color: mediumaquamarine;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- <%@ include file="../common/menubar.jsp"%> -->
+.pwd-area input {
+	background: rgba(0, 0, 0, .06);
+}
+label {
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: 700;
+	color: rgba(0, 0, 0, .7);
+	padding-bottom: 5px;
+}
+.usercode-area {
+	width: 100%;
+	display: inline;
+}
+.usercode-area input {
+	width: 70px;
+	margin-left: 20px;
+}
+.usercode-area label {
+	font-size: 1em;
+}
+#joinBtn {
+	margin-top: 50px;
+	margin-bottom: 100px;
+	background-color: rgb(116, 228, 190);
+	border: none;
+	color: white;
+	font-size: 1.5em;
+}
+#joinBtn:hover {
+	cursor: pointer;
+	background-color: mediumaquamarine;
+}
+
+.msgBox{
+	display : none;
+	color:red;
+}
+
+
+
+</style>
+</head>
+<body>
 
             <section class="join-form">
 
@@ -210,8 +219,7 @@
                                     name="userCode"
                                     value="03"
                                     onclick="show();">
-                                <label for="business">
-                                    사업자회원</label>
+                                <label for="business"> 사업자회원</label>
                             </div>
                             <div id="businessArea" style="width: 100%; display: none;">
 
@@ -234,14 +242,43 @@
                                     style="width: 100%;">
 
                             </div>
-                            <input id="joinBtn" type="submit" value="가입하기" onclick="welcome();">
+                            <input id="joinBtn" type="submit" value="가입하기" onsubmit="return enrollAvailable();">
                         </div>
                     </form>
 
                     <script>
+                    
+                    function enrollAvailable(){
+                		
+               		 var pwd = $("#userPwd").val();
+               		 var num = pwd.search(/[0-9]/g);
+               		 var eng = pwd.search(/[a-z]/ig);
+               		 var spe = pwd.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+               		 
+               		 if(pwd.length < 8 || pwd.length > 20 ){
+
+               			  alert("8자리 ~ 20자리 이내로 입력해주세요.");
+               			  return false;
+               			  
+               			 }else if(pwd.search(/\s/) != -1){
+               				 
+               			  alert("비밀번호는 공백 없이 입력해주세요.");
+               			  return false;
+               			  
+               			 }else if(num < 0 || eng < 0 || spe < 0 ){
+               				 
+               			  alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+               			  return false;
+               			  
+               			 }else {
+               				welcome();
+               			    return true;
+               			 }
+               		
+               	}
 
 
-
+						//비밀번호 일치 검사
                       function check_pw(){
 
 						var pwd1 = document.getElementById("userPwd").value;
@@ -249,23 +286,26 @@
 						var msg = '';
 					
 						if(pwd1 != pwd2){
-							msg='<b style=color:gray;>비밀번호가 일치하지 않습니다.</b>'
-						}else{
+							msg='<b style=color:orangered;>비밀번호가 일치하지 않습니다.</b>'
+						}else {
 							msg='<b style=color:gray;>비밀번호가 일치합니다.</b>'
 						}
 						$("#msgBox").html(msg);
-
-
+			
 
 					  }
 
+                      	//사업자 정보 입력 창 보이기
                         function show() {
                             $("#businessArea").css("display", "block");
                         }
+                      	//사업자 정보 입력 창 숨기기
+
                         function hide() {
                             $("#businessArea").css("display", "none");
                         }
-
+	
+                      	//가입 완료 메세지
                         function welcome() {
                             if ($("#businessArea").css("display") == "none") {
                                 alert("회원이 되신 것을 환영합니다! 가입 축하 선물로 20,000원의 적립금이 충전되었습니다.");
